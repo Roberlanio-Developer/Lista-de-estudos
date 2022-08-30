@@ -35,9 +35,9 @@ h1,p{
 }
 
 .botao{
-    background-color: darkgoldenrod;
+
+    background-color:#39393f;
     padding: 10px;
-    border: none;
     flex:1;
     height: 40px;
     margin-left: 10px;
@@ -47,9 +47,35 @@ h1,p{
     font-weight: bold;
     cursor:pointer;
     text-transform: uppercase;
+    position: relative;
+}
+
+.botao h1{
+    color: aliceblue
+}
+
+.botao:before{
+    content: "";
+    position: absolute;
+    top: -3.1px;
+    left: -2.9px;
+    height: 45px;
+    width: 104%;
+    border-radius:20px; 
+    background: linear-gradient(green,red,yellow);
+    z-index: -1;
+    animation: animate 3s linear infinite;
+}
+@keyframes animate {
+    0%{
+        filter: hue-rotate(0deg) brightness(100%)blur(10px);
+    }
+    100%{
+        filter: hue-rotate(360deg) brightness(100%)blur(10px);
+    }
 }
 .bt-azul{
-    background-color: rgb(236, 244, 80);
+    background-color: ;
     color: black;
     width: 40%;
     margin-top: 40px;
@@ -94,15 +120,17 @@ h1,p{
 }
 
 #Materia-Nova{
-    background-color: #f1f1f1;
+    background-color: #39393f;
     border: #32cdac;
     padding: 4px;
     width: 80%;
     height: 40px;
     outline: none;
     font-size: 14px;
-    color:#0f1726;
-    border-radius: 4px;
+    color:#ffffff;
+    border-radius: 10px;
     margin-top:30px;
+    position: relative;
+    border-radius: 10px;
 }
 
